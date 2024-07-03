@@ -1,9 +1,9 @@
 "use client"
 
 import UserInfo from "@/components/auth/UserInfo"
-import { useCurrentUser } from "@/hooks/use-current-user"
+import useCurrentUser from "@/hooks/useCurrentUser";
 
-const page =() => {
+const ClientPage =() => {
     const user=useCurrentUser()
   return (
     <div>
@@ -12,4 +12,4 @@ const page =() => {
   )
 }
 
-export default page
+export default ClientPage

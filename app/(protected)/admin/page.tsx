@@ -5,11 +5,11 @@ import FormSuccess from "@/components/FormSuccess"
 import RoleGate from "@/components/auth/RoleGate"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { useCurrentUser } from "@/hooks/use-current-user"
+import useCurrentUser from "@/hooks/useCurrentUser";
 import { UserRole } from "@prisma/client"
 import { toast } from "sonner"
 
-const page = () => {
+const AdminPage = () => {
 
     const session=useCurrentUser()
     const role=session?.role
@@ -67,4 +67,4 @@ const page = () => {
   )
 }
 
-export default page
+export default AdminPage

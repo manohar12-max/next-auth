@@ -3,7 +3,8 @@
 import { setting } from "@/actions/settings";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { useCurrentUser } from "@/hooks/use-current-user";
+
+import useCurrentUser from "@/hooks/useCurrentUser";
 import { useSession, signOut, signIn } from "next-auth/react";
 import { useEffect, useState, useTransition } from "react";
 import * as z from "zod";
@@ -31,7 +32,9 @@ import {
 import { SelectTrigger } from "@radix-ui/react-select";
 import { UserRole } from "@prisma/client";
 import { Switch } from "@/components/ui/switch";
-const page = () => {
+
+const SettingPage = () => {
+  
   const [isPending, startTransition] = useTransition();
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -203,4 +206,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default SettingPage;
